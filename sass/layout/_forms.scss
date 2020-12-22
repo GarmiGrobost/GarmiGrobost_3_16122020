@@ -1,0 +1,19 @@
+.form{
+    display: flex;
+    justify-content: center;
+    border: 1px solid $grey-color;
+    padding: 10px;
+    background-color: $grey-color;
+    &__icone-map{
+        padding-right: 15px;
+    }
+    
+}
+.form input[type="text"]{
+    border: none;
+    background-color: #f2f2f2;
+}
+.form ::placeholder{
+    font-weight: bold;
+    font-family: $font-secondary;
+}
