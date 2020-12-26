@@ -1,7 +1,7 @@
 .form{
     display: flex;
     justify-content: center;
-    border: 1px solid $grey-color;
+    border: 1px solid $light-grey-color;
     padding: 10px;
     background-color: $grey-color;
     &__icone-map{
@@ -11,7 +11,7 @@
 }
 .form input[type="text"]{
     border: none;
-    background-color: #f2f2f2;
+    background-color: $grey-color;
 }
 .form ::placeholder{
     font-weight: bold;
