@@ -27,17 +27,66 @@ P {
   font-size: 1rem;
   color: white;
   padding: 10px;
-  background-color: #9356DC;
-  border: 1px solid transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
   text-align: center;
   border-radius: 30px;
   box-shadow: 2px 3px 2px #9356DC;
   cursor: pointer;
 }
 .button a:hover {
-  background-color: #FF79DA;
+  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 4px 5px 3px #9356DC;
   transition: all 2s ease-in;
+}
+
+.card {
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid transparent;
+  background-color: white;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 0px #e2e0e0;
+  position: relative;
+}
+.card__image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.card__restaurant {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.card__plat {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  opacity: 0.6;
+  margin-left: 10px;
+}
+.card__icone {
+  position: absolute;
+  opacity: 0.6;
+  top: 170px;
+  right: 10px;
+  transition: background-color 0.3s;
+}
+.card__notification {
+  position: absolute;
+  z-index: 10;
+  background-color: #99E2D0;
+  font-family: "Roboto", sans-serif;
+  padding: 5px;
+  top: 10px;
+  right: 5px;
+}
+.card__icone:hover {
+  color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 
 .header {
@@ -109,6 +158,25 @@ P {
   font-weight: bold;
   margin-left: 20px;
   text-align: center;
+}
+
+.restaurants {
+  height: 170vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+.restaurants__titre {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.restaurants a {
+  text-decoration: none;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
