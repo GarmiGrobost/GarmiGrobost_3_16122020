@@ -1,5 +1,12 @@
 .card{
     width: 95%;
+    @include responsive (mobile, small){
+        width: 300px;
+        margin: 0;
+    }
+    @include responsive (mobile, xlarge){
+        width: 250px;
+    }
     margin: 0 auto;
     border: 1px solid transparent;
     background-color: $white-color;
@@ -31,7 +38,18 @@
         opacity: 0.6;
         top: 170px;
         right: 10px;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s;   
+    }
+    &__icone--full{
+        color: transparent;
+        background-image: linear-gradient($secondary-color, $primary-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+    }
+     &__icone--full:hover{
+        opacity: 1;
+        transition: all 1s ease-in;  
     }
     &__notification{
         position: absolute;
@@ -42,10 +60,6 @@
         top: 10px;
         right: 5px;
     }
-    &__icone:hover{
-        color: $primary-color;
-        background: linear-gradient($secondary-color, $primary-color)
-        
-        
-    }
+   
+    
 }

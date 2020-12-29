@@ -8,14 +8,32 @@
 .operation{
     display: flex;
     flex-direction: column;
+    
     &__titre{
         font-family: $font-secondary;
         font-size: 1rem;
         font-weight: bold;
         margin: 25px 0px 0px 20px;
+        @include responsive (mobile, moyen){
+            width: 100%;
+        }
+    }
+    & ul{
+        list-style-type: none;
+    }
+    &__number{
+        width: 20px;
+        height: 20px;
+        color: $white-color;
+        background-color: $primary-color;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 20px;
+        position: absolute;
+        left: -10px;
     }
     &__list{
-        
+        position: relative;
         border: 1px solid transparent;
         width: 90%;
         height: 45px;
@@ -25,6 +43,13 @@
         border-radius: 15px;
         background-color: $light-grey-color;
         box-shadow: 3px 5px 3px $grey-color;
+        @include responsive (mobile, small){
+            width: 250px;
+            display: inline-block;
+        }
+        @include responsive (mobile, xlarge){
+            margin-right: 75px;
+        }
     }
     &__icone{
         color: $primary-color ;
@@ -39,16 +64,29 @@
     }
 }
 .restaurants{
-    height: 170vh;
+    height: 175vh;
     display: flex;
     flex-direction: column;
     margin-top: 30px;
     justify-content: space-around;
     background-color: $light-grey-color;
+    padding-bottom: 30px;
+    @include responsive (mobile, small){
+        flex-flow: row wrap;
+        height: 100vh;
+        padding-top: 30px;
+        @include responsive (mobile, xlarge){
+            height: 60vh;
+        }
+    }
     &__titre{
         font-family: $font-secondary;
         font-size: 1rem;
         margin-left: 10px;
+        @include responsive (mobile, small){
+            width: 100%;
+            margin-left: 40px;
+        }
     }
 }
 .restaurants a{
