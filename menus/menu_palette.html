@@ -3,94 +3,94 @@
 <head>
 	<meta charset="utf-8"  />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css" /> 
+    <link rel="stylesheet" href="../css/style.css" /> 
     <script src="https://kit.fontawesome.com/7053d0f612.js" crossorigin="anonymous"></script>
 	<title>La palette du goût</title>
 </head>
 <body>
 	<!-- ENTETE -->
-    <header>
-		<a href="../index.html"><i class="fas fa-arrow-left"></i></a>
-        <img src="../images/logo/ohmyfood@2x.svg" alt="logo" />
+    <header class="headerMenu">
+		<a href="../index.html"><i class="fas fa-arrow-left headerMenu__icone"></i></a>
+        <img class="headerMenu__logo" src="../images/logo/ohmyfood@2x.svg" alt="logo" />
 	</header>
 	<!-- IMAGE RESTO -->
-	<figure>
-		<img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+	<figure class="cardMenu">
+		<img class="cardMenu__image" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
 	</figure>
 	<!-- SECTION -->
-	<section>
-		<h1>La palette du goût</h1>
-		<i class="far fa-heart"></i>
+	<section class="sectionMenu">
+		<h1 class="sectionMenu__titre">La palette du goût</h1>
+		<i class="far fa-heart sectionMenu__icone"></i>
 		<!-- ENTREES -->
-		<article>
-			<h2>Entrées</h2>
-			<a href=""><div>
-				<p>Fricassée d'escargot</p>
-				<p>Au primet d'espelette</p>
-				<p>25€</p>
+		<article class="articleMenu">
+			<h2 class="articleMenu__title">ENTREES</h2>
+			<a href=""><div class="menu">
+				<span class="menu__name">Fricassée d'escargot</span><br>
+				<span class="menu__kind">Au primet d'espelette</span>
+				<span class="menu__sum">25€</span>
 			</div></a>
-			<a href=""><div>
-				<p>Foie gras de canard mi-cuit</p>
-				<p>Et ses copeaux de truffe noire</p>
-				<p>35€</p>
+			<a href=""><div class="menu">
+				<span class="menu__name">Foie gras de canard mi-cuit</span><br>
+				<span class="menu__kind">Et ses copeaux de truffe noire</span>
+				<span class="menu__sum">35€</span>
 			</div></a>
-			<a href=""><div>
-				<p>Oeuf au plat</p>
-				<p>Assaisonné à la truffe sur lit de....</p>
-				<p>20€</p>
+			<a href=""><div class="menu">
+				<span class="menu__name">Oeuf au plat</span><br>
+				<span class="menu__kind">Assaisonné à la truffe sur lit de....</span>
+				<span class="menu__sum">20€</span>
 			</div></a>
 		</article>
 		<!-- PLATS -->
-		<article>
-			<h3>Plats</h3>
-			<a href=""><div>
-				<p>Filet de boeuf aux herbes</p>
-				<p>Accompagné de sa rimbabelle de légumes</p>
-				<p>40€</p>
+		<article class="articleMenu">
+			<h3 class="articleMenu__title">PLATS</h3>
+			<a href=""><div class="menu">
+				<span class="menu__name">Filet de boeuf aux herbes</span><br>
+				<span class="menu__kind">Accompagné de sa rimbabelle de légu...</span>
+				<span class="menu__sum">40€</span>
 			</div></a>
-			<a href=""><div>
-				<p>Parmentier de queue de boeuf</p>
-				<p>A la truffe noire sur sa purée de panais</p>
-				<p>35€</p>
+			<a href=""><div class="menu">
+				<span class="menu__name">Parmentier de queue de boeuf</span><br>
+				<span class="menu__kind">A la truffe noire sur sa purée de panais</span>
+				<span class="menu__sum">35€</span>
 			</div></a>
-			<a href=""><div>
-				<p>Filet de Turbot</p>
-				<p>Aux agrumes</p>
-				<p>44€</p>
+			<a href=""><div class="menu">
+				<span class="menu__name">Filet de Turbot</span><br>
+				<span class="menu__kind">Aux agrumes</span>
+				<span class="menu__sum">44€</span>
 			</div></a>
 		</article>
 		<!-- DESSERTS -->
-		<article>
-			<h4>DESSERTS</h4>
-			<a href=""><div>
-				<p>Paris-Brest</p>
-				<p>Revisité</p>
-				<p>18€</p>
+		<article class="articleMenu">
+			<h4 class="articleMenu__title">DESSERTS</h4>
+			<a href=""><div class="menu">
+				<span class="menu__name">Paris-Brest</span><br>
+				<span class="menu__kind">Revisité</span>
+				<span class="menu__sum">18€</span>
 			</div></a>
-			<a href=""><div>
-				<p>Macaron au chocolat d'exception</p>
-				<p>Et glace à la vanille de Madagascar</p>
-				<p>22€</p>
+			<a href=""><div class="menu">
+				<span class="menu__name">Macaron au chocolat d'exception</span><br>
+				<span class="menu__kind">Et glace à la vanille de Madagascar</span>
+				<span class="menu__sum">22€</span>
 			</div></a>
-			<a href="#"><div>
-				<p>Mousse au chocolat</p>
-				<p>Au piment d'espelette et à la truffe noire</p>
-				<p>23€</p>
+			<a href="#"><div class="menu">
+				<span class="menu__name">Mousse au chocolat</span><br>
+				<span class="menu__kind">Au piment d'espelette et à la truffe noire</span>
+				<span class="menu__sum">23€</span>
 			</div></a>
 		</article>
 		<!-- BOUTON DE COMMANDE -->
-		<aside>
-			<button>Commander</button>
-		</aside>
+		<div class="buttonMenu">
+			<a href="#">Commander</a>
+		</div>
 	</section>
 	<!-- FOOTER -->
-	<footer>
-		<img src="../images/logo/ohmyfood@2x.svg" alt="logo" />
+	<footer class="footer">
+		<img class="footer__logo" src="../images/logo/ohmyfood@2x.svg" alt="logo" />
 		<ul>
-			<li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-			<li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+			<li><a href="#"><i class="fas fa-utensils  footer__icone"></i>Proposer un restaurant</a></li>
+			<li><a href="#"><i class="fas fa-hands-helping  footer__icone"></i>Devenir partenaire</a></li>
 			<li><a href="#">Mentions légales</a></li>
-			<li><a href="mailto:">Contact</a></li>
+			<li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
 		</ul>	
 	</footer>
 </body>

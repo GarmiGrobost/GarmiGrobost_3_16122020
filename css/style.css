@@ -39,6 +39,29 @@ P {
   transition: all 1s ease-out;
 }
 
+.buttonMenu a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 780px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 1px 3px 2px #9356DC;
+  cursor: pointer;
+}
+.buttonMenu a:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 3px 5px 3px #9356DC;
+  transition: all 1s ease-out;
+}
+
 .card {
   width: 95%;
   margin: 0 auto;
@@ -107,6 +130,16 @@ P {
   right: 5px;
 }
 
+.cardMenu {
+  width: 100%;
+  border: 1px solid transparent;
+}
+.cardMenu__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -114,6 +147,22 @@ P {
 }
 .header__logo {
   font-family: "Shrikhand", cursive;
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+}
+.headerMenu__logo {
+  font-family: "Shrikhand", cursive;
+}
+.headerMenu__icone {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: black;
 }
 
 .form {
@@ -273,6 +322,74 @@ P {
 .restaurants a {
   text-decoration: none;
   color: black;
+}
+
+.sectionMenu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f2f2f2;
+  border: 1px solid black;
+  height: 860px;
+}
+.sectionMenu__titre {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10px;
+  text-align: left;
+}
+.sectionMenu__icone {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  opacity: 0.6;
+}
+.sectionMenu__buttonMenu {
+  display: flex;
+}
+
+.articleMenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.articleMenu__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-top: 20px;
+  opacity: 0.6;
+}
+
+.articleMenu a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 3px 2px #e2e0e0;
+  margin-top: 10px;
+  padding: 5px;
+  width: 95%;
+  position: relative;
+}
+.menu__name {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.menu__kind {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+.menu__sum {
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

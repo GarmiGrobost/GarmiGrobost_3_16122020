@@ -6,3 +6,18 @@
         font-family: $font-principal;
     }
 }
+.headerMenu{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    &__logo{
+        font-family: $font-principal;
+    }
+    &__icone{
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        color: $black-color;
+    }
+}
