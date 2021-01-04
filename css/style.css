@@ -46,7 +46,7 @@ P {
   text-align: center;
   color: white;
   position: absolute;
-  top: 780px;
+  top: 830px;
   left: 50%;
   transform: translate(-50%, -50%);
   outline: none;
@@ -190,7 +190,7 @@ P {
   display: flex;
   flex-direction: column;
   background-color: black;
-  padding-top: 15px;
+  padding-top: 30px;
   padding-bottom: 15px;
 }
 .footer a {
@@ -207,6 +207,7 @@ P {
   font-family: "Shrikhand", cursive;
   width: 100px;
   margin-left: 15px;
+  margin-bottom: 15px;
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
@@ -329,10 +330,13 @@ P {
   flex-direction: column;
   position: relative;
   background-color: #f2f2f2;
-  border: 1px solid black;
-  height: 860px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 900px;
+  transform: translateY(-45px);
+  margin-bottom: -45px;
 }
-.sectionMenu__titre {
+.sectionMenu__title {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   font-weight: bold;
@@ -353,12 +357,27 @@ P {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
+  position: relative;
 }
 .articleMenu__title {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
   opacity: 0.6;
+}
+.articleMenu__title::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 180px;
+  transition: 0.5s;
+}
+.articleMenu__title:hover::after {
+  width: 80px;
 }
 
 .articleMenu a {
