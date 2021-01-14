@@ -5,8 +5,13 @@
         }
     }
     @if $breakpoint == moyen {
-        @media (min-width: 768px) {
+        @media (min-width: 760px) {
            @content 
+        }
+    }
+    @if $breakpoint == xmoyen {
+        @media (min-width: 800px) {
+            @content
         }
     }
     @if $breakpoint == large {

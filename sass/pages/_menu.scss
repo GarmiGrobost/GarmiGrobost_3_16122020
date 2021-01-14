@@ -5,9 +5,23 @@
   background-color: $light-grey-color;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 1000px;
+  height: 1100px;
   transform: translateY(-45px);
   margin-bottom: -45px;
+  @include responsive (mobile, small){
+    height: 760px;
+    
+  }
+  @include responsive (mobile, moyen){
+    padding: 10px;
+  }
+  @include responsive (mobile, xmoyen){
+    height: 650px;
+    padding: 10px;
+  }
+  @include responsive (mobile, large){
+    height: 600px;
+  }
   &__title {
     font-family: $font-principal;
     font-size: 1.5rem;
@@ -42,6 +56,11 @@
   flex-direction: column;
   margin-left: 10px;
   position: relative;
+  @include responsive (mobile, small){
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+  }
   &__title {
     font-family: $font-secondary;
     font-size: 1rem;
@@ -49,6 +68,10 @@
     opacity: 0.6;
     border-bottom: 2px solid $tertiary-color;
     width: 30px;
+    @include responsive (mobile, small){
+      width: 100%;
+      border-bottom: none;
+    }
   }
 }
 .articleMenu a {
@@ -70,6 +93,10 @@
       animation: rotation 1s linear;
     }
   }
+  @include responsive (mobile, small){
+    width: 250px;
+    
+  }
   &__description {
     width: 100%;
     margin: 10px 0 10px 10px;
@@ -77,7 +104,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     &:hover{
-      width: 80%;
+      width: 90%;
     }
   }
   &__name {
@@ -97,6 +124,9 @@
     margin-right: 10px;
     margin-top: 30px;
     }
+}
+.sticky{
+  flex: 1;
 }
 
 .checkbox{

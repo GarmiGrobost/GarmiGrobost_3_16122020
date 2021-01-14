@@ -31,7 +31,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     
-    outline: none;
+    
     padding: 10px 30px;
     border-radius: 30px;
     background: linear-gradient($secondary-color, $primary-color);
@@ -39,8 +39,11 @@
     cursor: pointer;
     &:hover{
        background: linear-gradient($secondary-color, $primary-color);
-        box-shadow: 3px 5px 3px $primary-color;
-        transition: all 1s ease-out; 
+       box-shadow: 3px 5px 3px $primary-color;
+       transition: all 1s ease-out; 
+    }
+    @include responsive (mobile, large){
+        top: 87%;
     }
 }
 .buttonMenu{
