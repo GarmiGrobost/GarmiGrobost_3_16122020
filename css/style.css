@@ -46,7 +46,7 @@ P {
   text-align: center;
   color: white;
   position: absolute;
-  top: 90%;
+  top: 93%;
   left: 50%;
   transform: translate(-50%, -50%);
   outline: none;
@@ -115,6 +115,10 @@ P {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+}
+.card__icone--full:hover {
+  opacity: 1;
+  transition: all 1s ease-in;
 }
 .card__icone--full:hover {
   opacity: 1;
@@ -325,6 +329,65 @@ P {
   color: black;
 }
 
+.loader__conteneur {
+  background-color: white;
+  width: 100%;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 10px solid #bdc3c7;
+  width: 100px;
+  height: 100px;
+  border-top-color: blue;
+  border-bottom-color: red;
+  border-radius: 50%;
+  opacity: 0;
+  animation: chargeur 1s linear, opacity 1s;
+  background: white;
+}
+
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(1);
+    border-top-color: red;
+    border-bottom-color: red;
+  }
+  25% {
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.15);
+    border-top-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+  }
+  75% {
+    border-top-color: #99E2D0;
+    border-bottom-color: #99E2D0;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+    border-top-color: red;
+    border-bottom-color: red;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 100%;
+  }
+  95% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .sectionMenu {
   display: flex;
   flex-direction: column;
@@ -332,7 +395,7 @@ P {
   background-color: #f2f2f2;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 170vh;
+  height: 1000px;
   transform: translateY(-45px);
   margin-bottom: -45px;
 }
@@ -348,6 +411,18 @@ P {
   top: 25px;
   right: 30px;
   opacity: 0.6;
+  transition: background-color 0.3s;
+}
+.sectionMenu__icone--full {
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.sectionMenu__icone--full:hover {
+  opacity: 1;
+  transition: all 1s ease-in;
 }
 .sectionMenu__buttonMenu {
   display: flex;
@@ -363,22 +438,9 @@ P {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin-top: 30px;
-  margin-bottom: 0px;
-  padding-bottom: 10px;
   opacity: 0.6;
-}
-.articleMenu__title::after {
-  content: "";
-  height: 3px;
-  width: 0;
-  background: #99E2D0;
-  position: absolute;
-  left: 0;
-  bottom: 78%;
-  transition: 0.5s;
-}
-.articleMenu__title:hover::after {
-  width: 75px;
+  border-bottom: 2px solid #99E2D0;
+  width: 30px;
 }
 
 .articleMenu a {
@@ -387,14 +449,30 @@ P {
 }
 
 .menu {
-  border: 1px solid transparent;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 2px 3px 2px #e2e0e0;
+  box-shadow: 2px 3px 1px #e2e0e0;
   margin-top: 10px;
-  padding: 5px;
   width: 95%;
-  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.menu:hover .checkbox {
+  width: 25%;
+}
+.menu:hover .checkbox > .fa-check-circle {
+  opacity: 1;
+  animation: rotation 1s linear;
+}
+.menu__description {
+  width: 100%;
+  margin: 10px 0 10px 10px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__description:hover {
+  width: 80%;
 }
 .menu__name {
   font-family: "Roboto", sans-serif;
@@ -407,9 +485,77 @@ P {
   opacity: 0.6;
 }
 .menu__sum {
-  position: absolute;
-  right: 10px;
+  display: flex;
+  justify-content: end;
   font-weight: bold;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.checkbox {
+  transition: width 1s linear;
+  width: 0;
+  background: #99E2D0;
+  color: white;
+  border-radius: 0 10px 10px 0;
+  overflow: hidden;
+  cursor: pointer;
+  transform-origin: right center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotation {
+  from {
+    z-index: 1;
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    z-index: 1;
+    transform: rotate(360deg);
+  }
+}
+.menuFirst {
+  animation: menu-load 1s ease-out;
+  animation-fill-mode: forwards;
+  transform: translateY(3px);
+  opacity: 0;
+}
+
+.menuSecond {
+  animation: menu-load 1s ease-out 0.5s;
+  animation-fill-mode: forwards;
+  transform: translateY(3px);
+  opacity: 0;
+}
+
+.menuThird {
+  animation: menu-load 1s ease-out 0.75s;
+  animation-fill-mode: forwards;
+  transform: translateY(3px);
+  opacity: 0;
+}
+
+.menuFourth {
+  animation: menu-load 1s ease-out 1s;
+  animation-fill-mode: forwards;
+  transform: translateY(3px);
+  opacity: 0;
+}
+
+@keyframes menu-load {
+  from {
+    transform: translateY(3px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -46,6 +46,10 @@
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 0;
+        &:hover{
+            opacity: 1;
+            transition: all 1s ease-in;
+        }
     }
      &__icone--full:hover{
         opacity: 1;

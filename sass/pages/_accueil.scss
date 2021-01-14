@@ -93,3 +93,60 @@
     text-decoration: none;
     color: $black-color;
 }
+.loader__conteneur{
+    background-color: $white-color;
+    width: 100%;
+   
+}
+.loader{
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  margin: auto;
+  border: 10px solid #bdc3c7;
+  width: 100px;
+  height: 100px;
+  border-top-color: blue;
+  border-bottom-color: red;
+  border-radius: 50%;
+  opacity: 0;
+  animation: chargeur 1s linear, opacity 1.0s;
+  background: $white-color;
+}
+
+@keyframes chargeur {
+  0%{
+    transform: rotate(0deg) scale(1);
+    border-top-color: red;
+    border-bottom-color: red;
+  }
+  25%{
+    border-top-color: $primary-color;
+    border-bottom-color:$primary-color;
+  }
+  50% {
+     transform: rotate(360deg) scale(1.15);
+    border-top-color: $secondary-color;
+    border-bottom-color: $secondary-color;
+  }
+  75%{
+    border-top-color: $tertiary-color;
+    border-bottom-color: $tertiary-color;
+  }
+  100%{
+    transform: rotate(720deg) scale(1);
+    border-top-color: red;
+    border-bottom-color: red;
+  }
+  
+}
+@keyframes opacity{
+    0% {
+        opacity: 100%;
+    }
+    95%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
+}
