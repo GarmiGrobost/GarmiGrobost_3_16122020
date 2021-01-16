@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     
-    &__titre{
+    &__title{
         font-family: $font-secondary;
         font-size: 1rem;
         font-weight: bold;
@@ -79,7 +79,7 @@
             height: 60vh;
         }
     }
-    &__titre{
+    &__title{
         font-family: $font-secondary;
         font-size: 1rem;
         margin-left: 10px;
@@ -93,51 +93,69 @@
     text-decoration: none;
     color: $black-color;
 }
-.loader__conteneur{
-    background-color: $white-color;
-    width: 100%;
-   
+
+.page{
+    animation: opacity-page 3s linear;
 }
-.loader{
-  position: absolute;
-  top:0; left:0; right:0; bottom:0;
-  margin: auto;
-  border: 10px solid #bdc3c7;
-  width: 100px;
-  height: 100px;
-  border-top-color: blue;
-  border-bottom-color: red;
-  border-radius: 50%;
-  opacity: 0;
-  animation: chargeur 1s linear, opacity 1.0s;
-  background: $white-color;
+@keyframes opacity-page{
+    0%{
+        opacity: 0;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 
-@keyframes chargeur {
-  0%{
-    transform: rotate(0deg) scale(1);
-    border-top-color: red;
-    border-bottom-color: red;
-  }
-  25%{
-    border-top-color: $primary-color;
-    border-bottom-color:$primary-color;
-  }
-  50% {
-     transform: rotate(360deg) scale(1.15);
-    border-top-color: $secondary-color;
-    border-bottom-color: $secondary-color;
-  }
-  75%{
-    border-top-color: $tertiary-color;
-    border-bottom-color: $tertiary-color;
-  }
-  100%{
-    transform: rotate(720deg) scale(1);
-    border-top-color: red;
-    border-bottom-color: red;
-  }
-  
+.loader{
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 10px solid $primary-color;
+    opacity: 0;
+    animation: loading 3s linear, opacity 3.0s;
+    &::before, &::after{
+        content: "";
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        border-radius: 50%;
+    }
+    &::before{
+        border-top: 10px solid $secondary-color;
+        transform: rotate(120deg);
+    }
+    &::after{
+        border-top: 10px solid $tertiary-color;
+        transform: rotate(240deg);
+    }
+    & span{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        font-family: $font-secondary;
+        text-align: center;
+        line-height: 100px;
+        opacity: 0;
+        animation: loading-span 3s linear, opacity 3.0s;
+    }
+}
+@keyframes loading{
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading-span{
+    to{
+        transform: rotate(-360deg);
+    }
 }
 @keyframes opacity{
     0% {

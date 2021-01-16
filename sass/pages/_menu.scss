@@ -42,6 +42,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0;
+    cursor: pointer;
     }
   &__icone--full:hover{
     opacity: 1;
@@ -58,8 +59,7 @@
   position: relative;
   @include responsive (mobile, small){
     flex-flow: row wrap;
-    justify-content: space-around;
-    
+    justify-content: space-around; 
   }
   &__title {
     font-family: $font-secondary;
@@ -94,8 +94,7 @@
     }
   }
   @include responsive (mobile, small){
-    width: 250px;
-    
+    width: 250px; 
   }
   &__description {
     width: 100%;
