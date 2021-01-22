@@ -39,7 +39,6 @@
   &__icone--full{
     color: transparent;
     background-image: linear-gradient($secondary-color, $primary-color);
-    background-clip: text;
     -webkit-background-clip: text;
     opacity: 0;
     cursor: pointer;

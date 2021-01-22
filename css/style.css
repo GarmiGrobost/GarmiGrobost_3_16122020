@@ -117,10 +117,9 @@ P {
   transition: background-color 0.3s;
 }
 .card__icone--full {
-  color: transparent;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
   opacity: 0;
 }
 .card__icone--full:hover {
@@ -382,6 +381,7 @@ P {
   width: 100px;
   height: 100px;
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
   text-align: center;
   line-height: 100px;
   opacity: 0;
@@ -458,7 +458,6 @@ P {
 .sectionMenu__icone--full {
   color: transparent;
   background-image: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
   cursor: pointer;

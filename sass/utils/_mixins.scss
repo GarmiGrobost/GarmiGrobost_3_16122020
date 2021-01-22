@@ -4,22 +4,22 @@
            @content 
         }
     }
-    @if $breakpoint == moyen {
+    @else if $breakpoint == moyen {
         @media (min-width: 760px) {
            @content 
         }
     }
-    @if $breakpoint == xmoyen {
+    @else if $breakpoint == xmoyen {
         @media (min-width: 800px) {
             @content
         }
     }
-    @if $breakpoint == large {
+    @else if $breakpoint == large {
         @media (min-width: 1024px) {
            @content 
         }
     }
-    @if $breakpoint == xlarge {
+    @else if $breakpoint == xlarge {
         @media (min-width: 1200px) {
            @content 
         }

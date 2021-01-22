@@ -41,16 +41,16 @@
         transition: background-color 0.3s;   
     }
     &__icone--full{
-        color: transparent;
-        background-image: linear-gradient($secondary-color, $primary-color);
-        background-clip: text;
         -webkit-background-clip: text;
+        background-image: linear-gradient($secondary-color, $primary-color);
+        color: transparent;
         opacity: 0;
         &:hover{
             opacity: 1;
             transition: all 1s ease-in;
         } 
     }
+
     &__notification{
         position: absolute;
         z-index: 10;
@@ -60,7 +60,6 @@
         top: 10px;
         right: 5px;
     }
-   
     
 }
 .cardMenu{
