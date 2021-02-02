@@ -546,6 +546,7 @@ P {
 .menu__sum {
   display: flex;
   justify-content: end;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   margin-right: 10px;
   margin-top: 30px;
