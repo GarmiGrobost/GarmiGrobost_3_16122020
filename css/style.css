@@ -37,7 +37,7 @@ P {
   cursor: pointer;
 }
 .button a:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #FF79DA);
   box-shadow: 4px 5px 3px #9356DC;
   transition: all 1s ease-out;
 }
@@ -59,7 +59,7 @@ P {
   cursor: pointer;
 }
 .buttonMenu a:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #FF79DA);
   box-shadow: 3px 5px 3px #9356DC;
   transition: all 1s ease-out;
 }

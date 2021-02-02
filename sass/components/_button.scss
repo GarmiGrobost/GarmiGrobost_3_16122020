@@ -4,13 +4,13 @@
     font-size: 1rem;
     color: $white-color;
     padding: 10px;
-    background: linear-gradient($secondary-color, $primary-color);
+    background: linear-gradient($secondary-color,$primary-color,);
     text-align: center;
     border-radius: 30px;
     box-shadow: 2px 3px 2px $primary-color;
     cursor: pointer;
       &:hover{
-        background: linear-gradient($secondary-color, $primary-color);
+        background:linear-gradient($secondary-color, $secondary-color);
         box-shadow: 4px 5px 3px $primary-color;
         transition: all 1s ease-out;
     }
@@ -34,7 +34,7 @@
     box-shadow: 1px 3px 2px $primary-color;
     cursor: pointer;
     &:hover{
-       background: linear-gradient($secondary-color, $primary-color);
+       background: linear-gradient($secondary-color, $secondary-color);
        box-shadow: 3px 5px 3px $primary-color;
        transition: all 1s ease-out; 
     }
