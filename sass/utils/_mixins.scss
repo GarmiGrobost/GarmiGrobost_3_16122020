@@ -24,4 +24,9 @@
            @content 
         }
     }
+    @else if $breakpoint== xxlarge {
+        @media (min-width: 1440px) {
+            @content
+        }
+    }
 }
